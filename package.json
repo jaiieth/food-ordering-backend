@@ -2,13 +2,13 @@
   "name": "food-ordering-backend",
   "version": "1.0.0",
   "scripts": {
-    "build": "ts-node -r tsconfig-paths/register main && yarn prisma migrate dev --name init --schema prisma/foodschema.prisma",
+    "build": "ts-node -r tsconfig-paths/register main && yarn prisma migrate dev --name init --schema prisma/schemma.prisma",
     "dev": "ts-node-dev -r tsconfig-paths/register main.ts",
     "start": "ts-node -r tsconfig-paths/register main",
-    "prisma:merge": "cat prisma/foodschema/**.prisma > prisma/foodschema.prisma",
-    "prisma:format": "yarn prisma format --schema prisma/foodschema.prisma",
-    "prisma:migrate": "yarn prisma migrate dev --name init --schema prisma/foodschema.prisma",
-    "prisma:generate": "yarn pnpify prisma generate --schema=prisma/foodschema.prisma"
+    "prisma:merge": "cat prisma/foodschema/**.prisma > prisma/schema.prisma",
+    "prisma:format": "yarn prisma format --schema prisma/schema.prisma",
+    "prisma:migrate": "yarn prisma migrate dev --name init --schema prisma/schema.prisma",
+    "prisma:generate": "yarn pnpify prisma generate --schema=prisma/schema.prisma"
   },
   "dependencies": {
     "@prisma/client": "^4.10.1",
